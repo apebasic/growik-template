@@ -1,0 +1,126 @@
+/**
+ * CubicText3D Styles
+ * Based on Claude's exact cube geometry specifications
+ */
+
+/* Container Block */
+.block {
+  position: relative;
+  width: 100%;
+  perspective: 5000px;
+  perspective-origin: center center;
+}
+
+.block.hero {
+  height: 12rem; /* 192px */
+}
+
+.block.section {
+  height: 10rem; /* 160px */
+}
+
+/* 3D Box Container */
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+/* All Faces - Common Styles */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: visible;
+  background: transparent;
+}
+
+.face h2 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Hero Size Faces - 6rem (96px) depth */
+.hero .front {
+  transform: translate3d(0, 0, 6rem);
+}
+
+.hero .back {
+  transform: translate3d(0, 0, -6rem) rotateX(180deg);
+}
+
+.hero .top {
+  transform: translate(0, -6rem) rotateX(90deg);
+}
+
+.hero .bottom {
+  transform: translate(0, 6rem) rotateX(-90deg);
+}
+
+/* Section Size Faces - 5rem (80px) depth */
+.section .front {
+  transform: translate3d(0, 0, 5rem);
+}
+
+.section .back {
+  transform: translate3d(0, 0, -5rem) rotateX(180deg);
+}
+
+.section .top {
+  transform: translate(0, -5rem) rotateX(90deg);
+}
+
+.section .bottom {
+  transform: translate(0, 5rem) rotateX(-90deg);
+}
+
+/* Section Title Sizing */
+.section .face h2 {
+  font-size: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero .face h2 {
+    font-size: 3rem;
+  }
+  
+  .section .face h2 {
+    font-size: 2.5rem;
+  }
+  
+  .block.hero {
+    height: 10rem;
+  }
+  
+  .block.section {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero .face h2 {
+    font-size: 2rem;
+  }
+  
+  .section .face h2 {
+    font-size: 1.8rem;
+  }
+  
+  .block.hero {
+    height: 8rem;
+  }
+  
+  .block.section {
+    height: 6rem;
+  }
+}

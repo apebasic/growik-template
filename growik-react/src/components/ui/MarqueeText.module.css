@@ -1,0 +1,28 @@
+/**
+ * MarqueeText Styles
+ */
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Ensure smooth animation */
+.wrapper {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
