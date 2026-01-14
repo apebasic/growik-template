@@ -1,0 +1,161 @@
+/* CTASection Component Styles */
+
+.cta {
+  position: relative;
+  min-height: 100vh;
+  background-color: #FF6B4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+/* Background Circles */
+.circlesWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.circleOrange {
+  background-color: #FF6B4A;
+  border: 2px solid #000000;
+}
+
+.circleBlack {
+  background-color: #000000;
+}
+
+.circle:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+}
+
+.circle:nth-child(2) {
+  width: 400px;
+  height: 400px;
+  bottom: 15%;
+  right: 15%;
+}
+
+.circle:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: 20%;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Marquee */
+.marqueeWrapper {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.marqueeText {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .marqueeText {
+    font-size: 3rem;
+  }
+
+  .circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle:nth-child(2) {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 6rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .marqueeText {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+  }
+}

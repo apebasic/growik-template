@@ -59,11 +59,11 @@
 }
 
 .hero .top {
-  transform: translate(0, -6rem) rotateX(90deg);
+  transform: translate3d(0, -6rem, 0) rotateX(90deg);
 }
 
 .hero .bottom {
-  transform: translate(0, 6rem) rotateX(-90deg);
+  transform: translate3d(0, 6rem, 0) rotateX(-90deg);
 }
 
 /* Section Size Faces - 5rem (80px) depth */
@@ -76,11 +76,11 @@
 }
 
 .section .top {
-  transform: translate(0, -5rem) rotateX(90deg);
+  transform: translate3d(0, -5rem, 0) rotateX(90deg);
 }
 
 .section .bottom {
-  transform: translate(0, 5rem) rotateX(-90deg);
+  transform: translate3d(0, 5rem, 0) rotateX(-90deg);
 }
 
 /* Section Title Sizing */

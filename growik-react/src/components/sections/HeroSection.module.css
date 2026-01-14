@@ -1,0 +1,156 @@
+/* HeroSection Component Styles */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #FF6B4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Tagline */
+.tagline {
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+}
+
+.taglineText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: 0.05em;
+}
+
+/* Line 1: 3D Cubic Text */
+.line1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Line 2: Marquee */
+.line2 {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.marqueeText {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.marqueeVideo {
+  width: 120px;
+  height: 120px;
+  margin: 0 2rem;
+}
+
+/* Subtitle */
+.subtitle {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subtitleText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 0.05em;
+}
+
+/* Location Badge */
+.location {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #000000;
+}
+
+/* Section Label */
+.sectionLabel {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .marqueeText {
+    font-size: 3rem;
+  }
+
+  .marqueeVideo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .tagline {
+    top: 6rem;
+    left: 1.5rem;
+  }
+
+  .marqueeText {
+    font-size: 2rem;
+  }
+
+  .marqueeVideo {
+    width: 80px;
+    height: 80px;
+    margin: 0 1rem;
+  }
+
+  .location,
+  .subtitle,
+  .sectionLabel {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+  }
+
+  .container {
+    gap: 1rem;
+  }
+}

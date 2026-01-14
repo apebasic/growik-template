@@ -86,14 +86,19 @@ export const createMarquee = (element, options = {}) => {
     direction = 'left'
   } = options;
   
+  // Get half the width (one set of content)
   const distance = element.scrollWidth / 2;
   const xValue = direction === 'left' ? -distance : distance;
   
+  // Seamless infinite scroll using modifiers
   return gsap.to(element, {
     x: xValue,
     duration: duration,
     ease: 'none',
-    repeat: -1
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % distance) // Seamless loop
+    }
   });
 };
 

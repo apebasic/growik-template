@@ -25,6 +25,8 @@ export default function VideoShape({
         muted
         loop
         playsInline
+        controls={false}
+        preload="auto"
         src={src}
       >
         Your browser does not support the video tag.

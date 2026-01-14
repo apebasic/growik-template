@@ -1,0 +1,77 @@
+/* Card Component Styles */
+
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Default variant */
+.default {
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.default:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Service card variant - Full width with video background */
+.service {
+  padding: 3rem;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 2rem;
+}
+
+/* Project card variant - Image card with overlay */
+.project {
+  padding: 0;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background-color: #f5f5f5;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial card variant - Quote card */
+.testimonial {
+  padding: 2.5rem;
+  background-color: #f9f9f9;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+/* Pricing card variant - Plan card with features */
+.pricing {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.pricing:hover {
+  border-color: #FF6B4A;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .pricing {
+    padding: 2rem 1.5rem;
+  }
+}

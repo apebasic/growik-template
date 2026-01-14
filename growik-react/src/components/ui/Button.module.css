@@ -1,0 +1,124 @@
+/* Button Component Styles */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Primary variant - Black button with white text */
+.primary {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 1rem 2rem;
+  letter-spacing: 0.05em;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Secondary variant - Outlined button */
+.secondary {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 100px;
+  padding: 1rem 2rem;
+  letter-spacing: 0.05em;
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Link variant - Underlined text */
+.link {
+  background-color: transparent;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link:hover:not(:disabled) {
+  text-decoration-thickness: 2px;
+}
+
+/* Nav variant - Pill-shaped navigation button */
+.nav {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 100px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.nav:hover:not(:disabled) {
+  background-color: #FF6B4A;
+  transform: translateY(-2px);
+}
+
+/* Size variants */
+.small {
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.medium {
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+}
+
+.large {
+  font-size: 1rem;
+  padding: 1.25rem 2.5rem;
+}
+
+/* Text wrapper for animation */
+.text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect ripple (optional enhancement) */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button:hover::before {
+  width: 300px;
+  height: 300px;
+}
